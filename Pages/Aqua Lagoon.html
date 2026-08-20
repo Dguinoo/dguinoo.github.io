@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/project-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+
+    <title>Aqua Lagoon</title>
+</head>
+<body>
+
+    <div id="LogoHome">
+            <a href="/index.html">
+                <div id="LogoHome1">
+                    <img src="/Image/Nior Cat Logo.png" alt="Home">
+                </div>
+                <p>Home</p>
+            </a>
+    </div>
+
+    
+    <div class="whole-section">
+        <div class="content-section">
+            <div id="title">
+                <p>Aqua Lagoon</p>
+            </div>
+            <div id="title1">
+                <p>2D Arcade Fishing Game</p>
+            </div>
+            <div id="title2">
+                <p>A relaxing arcade fishing game where players catch fish, earn rewards, and enjoy simple but satisfying gameplay.</p>
+            </div>
+            <div class="icons">
+                <div class="icon"><p></p><i class="fa-brands fa-unity"></i><p> Unity</p></div>
+                <div class="icon"><i class="fa-solid fa-code"></i><p> C#</p></div>
+                <!-- <div class="icon"><i class="fa-solid fa-cube"></i><p>3D</p></div> -->
+                <div class="icon"><i class="fa-regular fa-square"></i><p>2D</p></div>
+            </div>
+        </div>
+
+        <div class="image-content" >
+            <img src="/Image/Aqua Lagoon.png" alt="Game 1 Image">
+        </div>
+    </div>
+
+    <div class="Screenshot-section">
+        <div id="ss-Title"><p>Gameplay Screenshots</p></div>
+        <div id="ss-Title1"></div>
+
+        <div class="screenshots">
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Aqua Lagoon/Aqua Lagoon 1.png')">
+                <img src="/Image/Screenshot/Aqua Lagoon/Aqua Lagoon 1.png" alt="Screenshot 1" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Aqua Lagoon/Aqua Lagoon 2.png')">
+                <img src="/Image/Screenshot/Aqua Lagoon/Aqua Lagoon 2.png" alt="Screenshot 2" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Aqua Lagoon/Aqua Lagoon 3.png')">
+                <img src="/Image/Screenshot/Aqua Lagoon/Aqua Lagoon 3.png" alt="Screenshot 3" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Aqua Lagoon/Aqua Lagoon 4.png')">
+                <img src="/Image/Screenshot/Aqua Lagoon/Aqua Lagoon 4.png" alt="Screenshot 4" >
+            </div>
+        </div>
+    </div>
+
+    <div class="screenshot-overlay">
+        <div id="close"><i class="fa-solid fa-xmark" onclick="off()"></i></div>
+        <div>
+            <img id="overlay-img" src ="" alt="Expanded Screenshot">
+        </div>
+    </div>
+
+
+    <div class="Gameplay-section">
+        <div id="ss-Title"><p>Gameplay</p></div>
+
+        <div id="GameplayVideo"><video controls src="/Video/Aqua Lagoon Vid.mp4"></video></div>
+        
+
+        <div class="project-details">
+            <div class="detail-item">
+                    <span class="label">Role</span>
+                    <span class="value">Game Programmer, Level Designer</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Tools</span>
+                    <span class="value">Unity</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Platform</span>
+                    <span class="value">PC</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Date Created</span>
+                    <span class="value">March 2024</span>
+            </div>
+            <!-- <div class="detail-item">
+                    <span class="label">Status</span>
+                    <span class="value">Complete</span>
+            </div> -->
+        </div>
+    </div>
+
+    <script>
+        let wrappers = document.querySelectorAll('.screenshot-wrapper');
+        let iconWrappers = document.querySelectorAll('.icon');
+        wrappers.forEach(wrapper =>{
+            wrapper.onmousemove = function(e){
+                // let x = e.pageX - wrapper.offsetLeft;
+                // let y = e.pageY - wrapper.offsetTop;
+                let rect = wrapper.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+                
+                wrapper.style.setProperty('--x', x + 'px');
+                wrapper.style.setProperty('--y', y + 'px');
+            }
+        })
+
+        iconWrappers.forEach(wrapper =>{
+            wrapper.onmousemove = function(e){
+                let rect = wrapper.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+                
+                wrapper.style.setProperty('--x', x + 'px');
+                wrapper.style.setProperty('--y', y + 'px');
+            }
+        })
+
+        function on(clickedImg) {
+            document.querySelector('.screenshot-overlay').style.display = "block";
+            document.getElementById("overlay-img").src = clickedImg;
+        }
+
+        function off() {
+            document.querySelector('.screenshot-overlay').style.display ="none"
+        }
+    </script>
+
+</body>
+</html>

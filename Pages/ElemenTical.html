@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/project-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+
+    <title>ElemenTical</title>
+</head>
+<body>
+
+    <div id="LogoHome">
+            <a href="/index.html">
+                <div id="LogoHome1">
+                    <img src="/Image/Nior Cat Logo.png" alt="Home">
+                </div>
+                <p>Home</p>
+            </a>
+    </div>
+
+    
+    <div class="whole-section">
+        <div class="content-section">            
+            <span class="eyebrow">// Client-Based Project</span>
+
+            <div id="title"> <p>ElemenTical</p> </div>
+            <div id="title1"><p>Educational</p> </div>
+            <div id="title2">
+                <p>Elementical is an educational mobile game where players scan physical QR-coded cards to answer timed multiple-choice questions, supporting up to 8 players on one device.</p>
+            </div>
+            <div class="icons">
+                <div class="icon"><p></p><i class="fa-brands fa-unity"></i><p> Unity</p></div>
+                <div class="icon"><i class="fa-solid fa-code"></i><p> C#</p></div>
+                <!-- <div class="icon"><i class="fa-solid fa-cube"></i><p>3D</p></div> -->
+                <div class="icon"><i class="fa-regular fa-square"></i><p>2D</p></div>
+            </div>
+        </div>
+
+        <div class="image-content" >
+            <img src="/Image/ElemenTical.png" alt="Game 2 Image">
+        </div>
+    </div>
+
+    
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>My Contribution</p>
+            </div>
+            <ul class="section-content">
+                <li>Helped brainstorm the game's design and overall direction.</li>
+                <li>Designed the user interface and buttons.</li>
+                <li>Assisted in designing the physical QR-coded cards.</li>
+                <li>Helped refine the game's visual style and layout.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>Key Features</p>
+            </div>
+            <ul class="section-content">
+                <li>Educational gameplay</li>
+                <li>Interactive QR card system</li>
+                <li>Timed multiple-choice questions</li>
+                <li>Up to 8-player local gameplay</li>
+                <li>Physical cards with QR codes</li>
+                <li>Offline gameplay</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>Challenges</p>
+            </div>
+            <p class="section-content-center">One of the biggest challenges was meeting the clinic's design expectations. The design went through multiple revisions because the client provided frequent feedback and requested changes to the UI and physical card designs.</p>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>Solutions</p>
+            </div>
+            <p class="section-content-center">I worked closely with the team to apply the client's feedback and make revisions efficiently. We presented updated designs regularly, discussed the changes with the client, and refined the UI and card designs until they met the required expectations.</p>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>What I Learned</p>
+            </div>
+            <p class="section-content-center">This project taught me the importance of adapting to client feedback and being flexible during the design process. I learned how to communicate design ideas, handle multiple revisions, and create designs that balance both user experience and client requirements.</p>
+        </div>
+    </div>
+
+    <div class="Screenshot-section">
+        <div id="ss-Title"><p>Gameplay Screenshots</p></div>
+        <div id="ss-Title1">Click any image to expand</div>
+
+        <div id="ss-Title1"></div>
+        <div class="screenshots">
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/ElemenTical/ElemenTical 1.png')">
+                <img src="/Image/Screenshot/ElemenTical/ElemenTical 1.png" alt="Screenshot 1" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/ElemenTical/ElemenTical 2.png')">
+                <img src="/Image/Screenshot/ElemenTical/ElemenTical 2.png" alt="Screenshot 2" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/ElemenTical/ElemenTical 3.png')">
+                <img src="/Image/Screenshot/ElemenTical/ElemenTical 3.png" alt="Screenshot 3" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/ElemenTical/ElemenTical 4.png')">
+                <img src="/Image/Screenshot/ElemenTical/ElemenTical 4.png" alt="Screenshot 4" >
+            </div>            
+        </div>
+    </div>
+
+    <div class="screenshot-overlay">
+        <div id="close"><i class="fa-solid fa-xmark" onclick="off()"></i></div>
+        <div>
+            <img id="overlay-img" src ="" alt="Expanded Screenshot">
+        </div>
+    </div>
+
+
+    <div class="Gameplay-section">
+        <div id="ss-Title"><p>Gameplay</p></div>
+
+        <div id="GameplayVideo">
+            <iframe id="gameplayIframe"
+                src="https://www.youtube.com/embed/" 
+                title="Road Ready Gameplay" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+
+            <div id="noInternetFallback" class="no-internet-fallback">
+                <img src="/Image/no-internet.png" alt="No internet connection">
+            </div>
+        </div>
+        
+        
+
+        <div class="project-details">
+            <div class="detail-item">
+                    <span class="label">Role</span>
+                    <span class="value">UI/UX Design</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Tools</span>
+                    <span class="value">Unity, Photoshop, Canva</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Platform</span>
+                    <span class="value">Mobile</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Date Created</span>
+                    <span class="value">Aug 21, 2024</span>
+            </div>
+            <!-- <div class="detail-item">
+                    <span class="label">Status</span>
+                    <span class="value">Complete</span>
+            </div> -->
+        </div>
+    </div>
+
+    <script>
+        let wrappers = document.querySelectorAll('.screenshot-wrapper');
+        let iconWrappers = document.querySelectorAll('.icon');
+        wrappers.forEach(wrapper =>{
+            wrapper.onmousemove = function(e){
+                // let x = e.pageX - wrapper.offsetLeft;
+                // let y = e.pageY - wrapper.offsetTop;
+                let rect = wrapper.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+                
+                wrapper.style.setProperty('--x', x + 'px');
+                wrapper.style.setProperty('--y', y + 'px');
+            }
+        })
+
+        iconWrappers.forEach(wrapper =>{
+            wrapper.onmousemove = function(e){
+                let rect = wrapper.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+                
+                wrapper.style.setProperty('--x', x + 'px');
+                wrapper.style.setProperty('--y', y + 'px');
+            }
+        })
+
+        function on(clickedImg) {
+            document.querySelector('.screenshot-overlay').style.display = "block";
+            document.getElementById("overlay-img").src = clickedImg;
+        }
+
+        function off() {
+            document.querySelector('.screenshot-overlay').style.display ="none"
+        }
+
+        const gameplayIframe = document.getElementById('gameplayIframe');
+        const noInternetFallback = document.getElementById('noInternetFallback');
+
+        function showFallback(show) {
+            gameplayIframe.style.display = show ? 'none' : 'block';
+            noInternetFallback.style.display = show ? 'flex' : 'none';
+        }
+
+        // Quick real-world connectivity check (navigator.onLine alone isn't reliable —
+        // it only checks the network adapter, not actual internet access)
+        function checkRealConnection() {
+            if (!navigator.onLine) {
+                showFallback(true);
+                return;
+            }
+            // Try to fetch a tiny resource with a short timeout
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 3000);
+
+            fetch('https://www.youtube.com/favicon.ico', { mode: 'no-cors', signal: controller.signal })
+                .then(() => {
+                    clearTimeout(timeout);
+                    showFallback(false);
+                })
+                .catch(() => {
+                    clearTimeout(timeout);
+                    showFallback(true);
+                });
+        }
+
+        window.addEventListener('online', checkRealConnection);
+        window.addEventListener('offline', () => showFallback(true));
+
+        checkRealConnection();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/project-style new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Road Ready</title>
+</head>
+<body>
+
+    <div id="LogoHome">
+            <a href="/index.html">
+                <div id="LogoHome1">
+                    <img src="/Image/Nior Cat Logo.png" alt="Home">
+                </div>
+                <p>Home</p>
+            </a>
+    </div>
+
+
+    <div class="whole-section">
+        <div class="content-section">
+            <span class="eyebrow">// Personal Project</span>
+            <div id="title"> <p>Road Ready</p> </div>
+            <div id="title1"><p>3D Driving Simulator</p></div>
+            <div id="title2">
+                <p>A 3D driving game that is set in Naga City, Camarines Sur. This game teaches newbie and unlicensed drivers about traffic sign and road rules.</p>
+            </div>
+            <div class="icons">
+                <div class="icon"><i class="fa-brands fa-unity"></i><p>Unity</p></div>
+                <div class="icon"><i class="fa-solid fa-code"></i><p>C#</p></div>
+                <div class="icon"><i class="fa-solid fa-cube"></i><p>3D</p></div>
+                <!-- <div class="icon"><i class="fa-regular fa-square"></i><p>2D</p></div> -->
+            </div>
+        </div>
+
+        <div class="image-content">
+            <img src="/Image/Road Ready.png" alt="Road Ready game key art">
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <i class="fa-solid fa-users-gear"></i>
+                <p>My Contribution</p>
+            </div>
+            <ul class="section-content">
+                <li>Designed driving routes based on Naga City roads to teach and test players' understanding of Philippine LTO road signs.</li>
+                <li>Built a 5km² open-world terrain with 50+ 3D assets (buildings, trees, road props) to design progressive driving routes that test players' understanding of Philippine traffic laws.</li>
+                <li>Modeled 3D vehicles (jeepney, Etrike, Car, Ebike, bike) and environmental assets to maximize immersion and replayability.</li>
+                <li>Optimized game assets to reduce memory usage and improve performance.</li>
+                <li>Identified gameplay bugs.</li>
+                <li>Tested vehicle physics.</li>
+                <li>Verified collision detection and checkpoint logic.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <i class="fa-solid fa-star"></i>
+                <p>Key Features</p>
+            </div>
+            <ul class="section-content">
+                <li>3D driving simulation</li>
+                <li>Philippine traffic sign recognition</li>
+                <li>Educational learning mode</li>
+                <li>Interactive driving course</li>
+                <li>Offline gameplay</li>
+                <li>Progression System</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <p>Challenges</p>
+            </div>
+            <p class="section-content-center">I encountered a challenge that was optimizing the game for lower-end computers without significantly reducing visual quality and how to improve 3d models.</p>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <i class="fa-solid fa-lightbulb"></i>
+                <p>Solutions</p>
+            </div>
+            <p class="section-content-center">To improve performance, I optimized the 3D models by converting them to low-poly versions, reduced unnecessary lighting calculations, implemented mesh compression on the 3D models, simplified shaders, and reused materials to reduce draw calls.</p>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <p>What I Learned</p>
+            </div>
+            <p class="section-content-center">This project strengthened my skills in 3D game development, debugging, optimization, and collaboration within a development team. Despite it being my first project as a 3D artist, I also gained experience integrating assets and designing systems that balance performance with player experience, gaining valuable hands-on experience in developing and optimizing a 3D game.</p>
+        </div>
+    </div>
+
+    <div class="Screenshot-section">
+        <div id="ss-Title"><p>Gameplay Screenshots</p></div>
+        <div id="ss-Title1">Click any image to expand</div>
+
+        <div class="screenshots">
+            <div class="screenshot-wrapper" tabindex="0" role="button" aria-label="Expand screenshot 1" onclick="openScreenshot('/Image/Screenshot/Road Ready/RR1.png')">
+                <img src="/Image/Screenshot/Road Ready/RR1.png" alt="Road Ready gameplay screenshot 1">
+            </div>
+            <div class="screenshot-wrapper" tabindex="0" role="button" aria-label="Expand screenshot 2" onclick="openScreenshot('/Image/Screenshot/Road Ready/RR2.png')">
+                <img src="/Image/Screenshot/Road Ready/RR2.png" alt="Road Ready gameplay screenshot 2">
+            </div>
+            <div class="screenshot-wrapper" tabindex="0" role="button" aria-label="Expand screenshot 3" onclick="openScreenshot('/Image/Screenshot/Road Ready/RR3.png')">
+                <img src="/Image/Screenshot/Road Ready/RR3.png" alt="Road Ready gameplay screenshot 3">
+            </div>
+            <div class="screenshot-wrapper" tabindex="0" role="button" aria-label="Expand screenshot 4" onclick="openScreenshot('/Image/Screenshot/Road Ready/RR4.png')">
+                <img src="/Image/Screenshot/Road Ready/RR4.png" alt="Road Ready gameplay screenshot 4">
+            </div>
+        </div>
+    </div>
+
+    <div class="screenshot-overlay">
+        <div id="close"><i class="fa-solid fa-xmark" onclick="closeScreenshot()"></i></div>
+        <div>
+            <img id="overlay-img" src="" alt="Expanded screenshot">
+        </div>
+    </div>
+
+
+    <div class="Gameplay-section">
+        <div id="ss-Title"><p>Gameplay</p></div>
+
+        <div id="GameplayVideo"><video controls src="/Video/Road Ready Vid.mp4"></video></div>
+
+
+        <div class="project-details">
+            <div class="detail-item">
+                    <span class="label">Role</span>
+                    <span class="value">Technical Environment Artist</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Tools</span>
+                    <span class="value">Unity, Maya, Blender, Photoshop</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Platform</span>
+                    <span class="value">PC</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Date Created</span>
+                    <span class="value">Dec 21, 2025</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Status</span>
+                    <span class="value">Complete</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const wrappers = document.querySelectorAll('.screenshot-wrapper');
+        const iconWrappers = document.querySelectorAll('.icon');
+
+        function handlePointerGlow(el) {
+            el.onmousemove = function (e) {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                el.style.setProperty('--x', x + 'px');
+                el.style.setProperty('--y', y + 'px');
+            };
+        }
+
+        wrappers.forEach(handlePointerGlow);
+        iconWrappers.forEach(handlePointerGlow);
+
+        const overlay = document.querySelector('.screenshot-overlay');
+        const overlayImg = document.getElementById('overlay-img');
+        let lastFocused = null;
+
+        function openScreenshot(src) {
+            lastFocused = document.activeElement;
+            overlayImg.src = src;
+            overlay.classList.add('is-open');
+            requestAnimationFrame(() => overlay.classList.add('is-visible'));
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeScreenshot() {
+            overlay.classList.remove('is-visible');
+            document.body.style.overflow = '';
+            setTimeout(() => {
+                overlay.classList.remove('is-open');
+                overlayImg.src = '';
+            }, 300);
+            if (lastFocused) lastFocused.focus();
+        }
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeScreenshot();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeScreenshot();
+        });
+
+        wrappers.forEach((wrapper) => {
+            wrapper.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    wrapper.click();
+                }
+            });
+        });
+
+        // Gentle scroll-reveal for content sections
+        const revealTargets = document.querySelectorAll('.info-section');
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            revealTargets.forEach((el) => observer.observe(el));
+        } else {
+            revealTargets.forEach((el) => el.classList.add('is-visible'));
+        }
+    </script>
+
+</body>
+</html>

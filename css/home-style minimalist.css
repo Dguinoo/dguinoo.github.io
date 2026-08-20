@@ -1,0 +1,841 @@
+/* ==============================
+    DESIGN TOKENS
+============================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #111111;
+    --surface: #161616;
+    --surface-2: #1b1b1b;
+    --border: #2a2a2a;
+    --border-soft: #333232;
+    --text: #ffffff;
+    --text-dim: #a0a0a0;
+    --text-body: rgba(255, 255, 255, 0.78);
+    --accent: #ff3131;
+    --accent-glow: rgba(255, 49, 49, 0.35);
+    --font-display: "Consolas", "SFMono-Regular", monospace;
+    --font-body: "Inter", "Segoe UI", sans-serif;
+    --radius-lg: 26px;
+    --radius-md: 18px;
+    --radius-sm: 12px;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+    width: 1em;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #5f5f5f);
+    border-radius: 10px;
+    border: var(--bg) solid 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, var(--accent));
+}
+
+/* ==============================
+    LOGO
+============================== */
+#LogoHome {
+    position: fixed;
+    top: 20px;
+    left: 50px;
+    z-index: 30;
+    transition: opacity 0.3s ease;
+}
+
+#LogoHome1 {
+    border: 3px solid var(--border-soft);
+    border-radius: 50px;
+    padding: 6px 11px 6px 8px;
+    transition: border-color 0.2s ease;
+}
+
+#LogoHome img {
+    height: 35px;
+    width: 35px;
+    display: block;
+}
+
+#LogoHome a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: color 0.2s ease;
+}
+
+#LogoHome a:hover {
+    color: var(--accent);
+}
+
+#LogoHome a:hover #LogoHome1 {
+    border-color: var(--accent);
+}
+
+/* ==============================
+    SPLASH SCREEN
+============================== */
+#splash-screen {
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+#splash-screen.fade-out {
+    opacity: 0;
+}
+
+#splash-screen img {
+    width: 72px;
+    height: 72px;
+    animation: splash-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes splash-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.08); opacity: 0.7; }
+}
+
+/* ==============================
+    HERO
+============================== */
+.first-section {
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    min-height: 92vh;
+    padding: 130px 8% 70px;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+body.loaded .first-section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#myPic img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 3px solid var(--border-soft);
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+#myPic img:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+#front {
+    max-width: 560px;
+}
+
+#p1 {
+    color: var(--text);
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+#p2 {
+    color: var(--text-body);
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.65;
+    margin-top: 22px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 38px;
+}
+
+.Topbutton {
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid var(--border-soft);
+    transition: border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+
+.buttonViewProject {
+    background: var(--accent);
+    color: #111;
+    border-color: var(--accent);
+}
+
+.buttonViewProject:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px -12px var(--accent-glow);
+}
+
+.buttonDownloadCV {
+    background: var(--surface);
+    color: var(--text);
+}
+
+.buttonDownloadCV:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+/* ==============================
+    SECTION TITLES (shared)
+============================== */
+#section_ProjectTitle p,
+#education-title,
+#skills-title,
+#section_ContactTitle p {
+    color: var(--text);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(32px, 4vw, 44px);
+    text-align: center;
+    padding: 10px 0 40px;
+}
+
+/* ==============================
+    PROJECTS
+============================== */
+#section_Project {
+    padding: 60px 8% 40px;
+}
+
+#container-Project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+
+.project-card {
+    display: none;
+    flex-direction: column;
+    width: 320px;
+    background: linear-gradient(180deg, var(--surface), var(--bg));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 20px 45px -25px var(--accent-glow);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border);
+}
+
+.content-Title,
+#Echoes-Title {
+    color: var(--text);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 19px;
+    padding: 18px 20px 4px;
+}
+
+.card-content {
+    color: var(--text-dim);
+    font-family: var(--font-body);
+    font-size: 14px;
+    padding: 4px 20px 0;
+}
+
+.project-card a {
+    display: block;
+    padding: 18px 20px 22px;
+    margin-top: auto;
+}
+
+.button-View {
+    width: 100%;
+    padding: 11px 0;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border-soft);
+    border-radius: 24px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.button-View:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 44px;
+}
+
+#show-more {
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 14px;
+    padding: 12px 30px;
+    border: 1px solid var(--border-soft);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+#show-more:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* ==============================
+    EDUCATION
+============================== */
+#section_Education {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+#container-Education {
+    display: flex;
+    justify-content: center;
+}
+
+.education-card {
+    max-width: 620px;
+    width: 100%;
+    background: linear-gradient(180deg, var(--surface), var(--bg));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 34px 40px;
+    transition: border-color 0.3s ease;
+}
+
+.education-card:hover {
+    border-color: var(--accent);
+}
+
+.education-card .content-Title {
+    padding: 0;
+    font-size: 20px;
+}
+
+.education-card .card-CourseContent {
+    color: var(--text-dim);
+    font-family: var(--font-body);
+    font-size: 15px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* ==============================
+    SKILLS
+============================== */
+#section_Skills {
+    padding: 40px 8% 90px;
+    text-align: center;
+}
+
+#container-Skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    background: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 30px;
+    overflow: hidden;
+    --clr: rgba(255, 49, 49, 0.25);
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.skill-icon:hover {
+    border-color: var(--accent-glow);
+    transform: translateY(-2px);
+}
+
+.skill-icon i {
+    color: var(--accent);
+    font-size: 16px;
+    z-index: 1;
+}
+
+.skill-icon p {
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.skill-icon::before {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    background: radial-gradient(var(--clr), transparent, transparent);
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    transition: opacity 0.5s, top 0s, left 0s;
+    pointer-events: none;
+    mix-blend-mode: lighten;
+}
+
+.skill-icon:hover::before {
+    opacity: 1;
+}
+
+/* ==============================
+    CONTACT
+============================== */
+#section-ContactMe {
+    padding: 40px 8% 100px;
+}
+
+#container-ContactMe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#container-Context {
+    flex: 1 1 340px;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#title-ContactMe {
+    color: var(--text);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.3;
+}
+
+.text-ContactMe-Container {
+    margin-top: 16px;
+}
+
+#text-ContactMe {
+    color: var(--text-body);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.text-ContactMe-Container hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin-top: 24px;
+}
+
+.social {
+    display: flex;
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border-soft);
+    border-radius: 50%;
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.social a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+#Contact-Form-Div {
+    flex: 1 1 380px;
+    max-width: 460px;
+    display: flex;
+}
+
+#contactForm-Panel {
+    width: 100%;
+    background: linear-gradient(180deg, var(--surface), var(--bg));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 34px;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm-Panel:hover {
+    border-color: var(--accent);
+}
+
+.contact-form-title h2 {
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.contact-form-title hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin-top: 10px;
+    margin-bottom: 22px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contactForm-inputs {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-sm);
+    padding: 13px 16px;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 14px;
+    transition: border-color 0.25s ease;
+}
+
+.contactForm-inputs::placeholder {
+    color: var(--text-dim);
+}
+
+.contactForm-inputs:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+textarea.contactForm-inputs {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+    padding: 13px 0;
+    background: var(--accent);
+    color: #111;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px -14px var(--accent-glow);
+}
+
+/* ==============================
+    SKELETON LOADERS
+============================== */
+@keyframes skeleton-shimmer {
+    0% { background-position: -400px 0; }
+    100% { background-position: 400px 0; }
+}
+
+.skeleton-circle,
+.skeleton-text-line,
+.skeleton-hero-btn,
+.skeleton-img,
+.skeleton-line,
+.skeleton-btn,
+.skeleton-education-card,
+.skeleton-skill-icon,
+.skeleton-social-icon,
+.skeleton-contact-form-panel,
+.skeleton-input {
+    background: linear-gradient(90deg, var(--surface) 25%, var(--surface-2) 37%, var(--surface) 63%);
+    background-size: 800px 100%;
+    animation: skeleton-shimmer 1.4s linear infinite;
+    border-radius: var(--radius-sm);
+}
+
+.first-section:has(.skeleton-circle) {
+    opacity: 1;
+    transform: none;
+}
+
+.skeleton-circle {
+    width: 380px;
+    height: 380px;
+    border-radius: var(--radius-lg);
+    flex-shrink: 0;
+}
+
+.skeleton-text-block {
+    max-width: 560px;
+    width: 100%;
+}
+
+.skeleton-text-line {
+    height: 18px;
+    margin-bottom: 14px;
+}
+.skeleton-text-line.title { height: 46px; width: 70%; margin-bottom: 22px; }
+.skeleton-text-line.full { width: 100%; }
+.skeleton-text-line.wide { width: 90%; }
+.skeleton-text-line.short { width: 55%; }
+
+.skeleton-btn-group {
+    display: flex;
+    gap: 16px;
+    margin-top: 22px;
+}
+.skeleton-hero-btn {
+    width: 160px;
+    height: 46px;
+    border-radius: 30px;
+}
+
+.project-card.skeleton {
+    display: flex;
+}
+.skeleton-img {
+    width: 100%;
+    height: 180px;
+    border-radius: 0;
+}
+.project-card .skeleton-line {
+    margin: 14px 20px 0;
+    height: 14px;
+}
+.project-card .skeleton-line.medium { width: 60%; height: 18px; }
+.project-card .skeleton-line.short { width: 40%; }
+.project-card .skeleton-btn {
+    height: 38px;
+    margin: 18px 20px 22px;
+    border-radius: 24px;
+}
+
+.skeleton-education-card {
+    width: 100%;
+    max-width: 620px;
+    padding: 34px 40px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+}
+
+.skeleton-skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.skeleton-skill-icon {
+    width: 110px;
+    height: 42px;
+    border-radius: 30px;
+}
+
+.skeleton-social-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.skeleton-contact-form-panel {
+    width: 100%;
+    max-width: 420px;
+    padding: 34px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+}
+.skeleton-input {
+    height: 46px;
+    margin-top: 16px;
+}
+.skeleton-input.textarea { height: 100px; }
+.skeleton-input.btn { height: 46px; }
+
+/* ==============================
+   RESPONSIVE — SMALL DESKTOP (max 1280px)
+============================== */
+@media (max-width: 1280px) {
+    .first-section {
+        gap: 40px;
+        padding: 120px 6% 60px;
+    }
+    #myPic img,
+    .skeleton-circle {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* ==============================
+   RESPONSIVE — TABLET LANDSCAPE (max 1023px)
+============================== */
+@media (max-width: 1023px) {
+    .first-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 130px 8% 60px;
+        min-height: unset;
+    }
+    #front {
+        max-width: 620px;
+    }
+    .button-container {
+        justify-content: center;
+    }
+    .skeleton-text-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .skeleton-text-line.title,
+    .skeleton-text-line.full,
+    .skeleton-text-line.wide,
+    .skeleton-text-line.short {
+        width: 80%;
+    }
+    #container-ContactMe {
+        flex-direction: column;
+        align-items: center;
+    }
+    #container-Context {
+        max-width: 500px;
+        text-align: center;
+        align-items: center;
+    }
+    .social {
+        justify-content: center;
+    }
+}
+
+/* ==============================
+   RESPONSIVE — TABLET PORTRAIT (max 767px)
+============================== */
+@media (max-width: 767px) {
+    #LogoHome {
+        left: 20px;
+        top: 15px;
+    }
+    #myPic img,
+    .skeleton-circle {
+        width: 220px;
+        height: 220px;
+    }
+    .project-card {
+        width: 100%;
+        max-width: 360px;
+    }
+}
+
+/* ==============================
+   RESPONSIVE — LARGE MOBILE (max 479px)
+============================== */
+@media (max-width: 479px) {
+    .Topbutton {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+    #contactForm-Panel,
+    .skeleton-contact-form-panel {
+        padding: 24px;
+    }
+}
+
+/* ==============================
+   REDUCED MOTION
+============================== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

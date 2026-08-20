@@ -1,0 +1,786 @@
+.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+
+
+body {
+    background-color: #111111
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+    width: 1em;
+}
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent, #5f5f5f);
+    border-radius: 10px;
+    border: #1e1e1e solid 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, red);
+}
+
+
+
+#LogoHome {
+    position: fixed;
+    top: 20px;
+    left: 50px;
+    z-index: 1000;
+    border: 3px solid #333333;
+    border-radius: 50px; 
+    padding: 6px 11px 6px 8px;
+    transition: border-color 0.1s ease;
+}
+
+
+#LogoHome img {
+    height: 35px;
+    width: 35px;
+}
+
+#LogoHome:hover {
+    border-color: red;
+}
+
+/* ------------------------------ */
+/* 
+#myPic {
+    width: 215px;
+    height: 215px;
+    overflow: hidden;
+    border-radius: 100%;
+    padding: 100px;
+    margin-left: 60.8%;
+    margin-top: 7.4%;
+    border: 5px solid #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.2s ease-out;
+}
+
+#myPic img {    
+    width: 195%;
+    height: 195%;
+    object-fit: cover;
+    transition: scale 0.2s ease-out;
+}
+
+#p13 
+{
+    color :white;
+    font-weight: 900;
+    font-size: 40px;
+    position: absolute;
+    top: 200px;
+    left: 170px;
+}
+#p12 
+{
+    color :white;
+    font-size: 25px;
+    position: absolute;
+    top: 280px;
+    left: -50px;
+}   */
+
+/* ------------------------------ */
+
+.first-section {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 10%;
+    min-height: 80vh;
+    flex-wrap: wrap;
+    font-family: "Consolas";
+}
+
+#myPic {
+    width: 415px;
+    height: 415px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.2s ease-out;
+    margin: 20px;
+}
+
+#myPic img {    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: scale 0.2s ease-out;
+}
+
+#myPic:hover {
+    border-color: #ff0000;
+} 
+#myPic img:hover {
+    scale: 1.3;
+}
+
+#front {
+    max-width: 600px;
+    text-align: left;
+}
+#p1 {
+    color :white;
+    font-weight: 900;
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    margin-bottom: 10px;
+}
+
+#p2 {
+    color :white;
+    font-size: 1.5rem;
+    /* line-height: 1.6; */
+    margin-bottom:25px;
+    /* margin: 0 0 30px 0; */
+}  
+
+.button-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.Topbutton{
+    background-color: #111111;
+    color: white;
+    font-size: 20px;
+    padding: 10px 45px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: scale 0.2s ease;
+    border: 3px solid #333232;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.Topbutton:hover{
+    color:rgb(255, 255, 255);
+    scale: 1.05;
+    border-color: red;
+}
+
+.buttonViewProject{
+    /* position: absolute; */
+    top: 65%;
+    left: 170px;
+    
+}
+.buttonDownloadCV{
+    /* position: absolute; */
+    top: 65%;
+    left: 400px;
+}
+
+
+#section_ProjectTitle {
+    padding-top: 2%;
+    color: white;
+    margin-top: 10vh;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+}
+
+#container-Project {
+    display: grid;
+    grid-template-columns: repeat(3, 290px);
+    /* grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); */
+    gap: 50px 115px;
+    padding: 0%;
+    justify-content: center;
+    place-items: center;
+}
+
+.project-card {
+    
+    position: relative;
+    background-color:#1e1e1e;
+    border-radius: 30px;
+    border: 3px solid #333232;
+    padding: 20px;
+    width: 290px;
+    height: 330px;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    display: none; 
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Ensure transition is here */
+}
+
+
+.project-card.show {
+    opacity: 1;
+    transform: translateY(0);
+    /* Use a standard transition instead of a forced @keyframe for better toggle control */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.project-card img {
+    width: 270px;
+    height: 150px;
+    border-radius: 15px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    border-color: red ;
+}
+
+.content-Title {
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 3%;
+    margin-bottom: 0%;
+}
+
+#Echoes-Title {    
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    margin-top: 3%;
+    margin-bottom: 0%;
+}
+
+
+.card-content {
+    color: white;
+    margin-top: 3%;
+    margin-bottom: 0%;
+    
+}
+
+.button-View {
+    padding: 7px 40px;
+    background-color: #111111;
+    border: 2px solid #333232;
+    border-radius: 15px;
+    margin-top: 10%;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.button-View:hover{
+    background-color: #333232;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+}
+#show-more {
+    display: inline-block;
+    padding: 10px 30px;
+    border: 3px solid #333232;
+    color: white;
+    font-size: 16px;
+    background-color:#111111;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: scale 0.2s ease;
+}
+#show-more:hover {
+    border-color: red;
+    scale: 1.05;
+}
+
+
+
+
+
+
+#section_ContactTitle{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color :white;
+    position: relative;
+    top: 105px;
+}
+
+
+#container-ContactMe {
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    align-items: stretch;
+    height: 700px;
+}
+
+#container-Context {
+    place-items: center;
+    width: 40%;
+    margin-left: 10%;
+}
+
+.text-ContactMe-Container {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#title-ContactMe {
+    color: white;
+    font-size: 230%;
+    font-weight: 700;
+    margin-top: 35%;
+}
+#text-ContactMe {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 170%;
+} 
+
+.text-ContactMe-Container hr {
+    border: none;
+    height: 5px;
+    width: 90%;
+    background-color:#ffffff;
+    border-radius: 10px;
+    margin-top: 13%;
+}
+
+
+.social { 
+    height: 70px;
+    width: 470px;
+    margin-right: 10px;
+    padding-left: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5%;
+    height: 10%;
+    margin: 4%;
+    margin-right: 10px; 
+    padding: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 60px;
+    color: white;
+    text-decoration: none;
+    scale: 1.7;
+    transition: scale 0.1s ease, border-color 0.3s ease;
+}
+
+.social a:hover {
+    border-color: red;
+    scale: 2;
+}
+
+#Contact-Form-Div {
+    width: 50%;
+    justify-content: space-evenly;
+
+}
+
+
+#contactForm-Panel {
+    background-color: #1e1e1e;
+    margin: 15%;
+    margin-right: 20%;
+    border: 5px solid #333232;
+    border-radius: 50px;
+}
+
+.container-ContactForm {
+    height: 70vh;
+    display: flex;
+    align-items: center;  
+    justify-content: space-evenly;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-form-title h2{
+    font-weight: 600;
+    color: white;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.contactForm-inputs {
+    height: 40px;
+    width: 360px;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: black;
+    border-radius: 50px;
+    border: 2.5px solid #333232;
+}
+
+.contact-form textarea {
+    height: 120px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contactForm-inputs:focus {
+    border-color:red;
+}
+
+.contactForm-inputs::placeholder {
+    color:#5f5f5f;
+}
+
+.contact-form button {
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight:bold;
+    color: white;
+    gap: 10px;
+    border: 3px solid #333232;
+    border-radius: 50px;
+    background-color: #111111;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #333232;
+}
+
+/* .label {
+    position: absolute;
+    bottom: -145%;
+    right: 33%;
+    
+}
+.contactForm-inputs:focus + .label,
+.contactForm-inputs:valid + .label {
+    transform: translateY(-130%) scale(0.8);
+    color: rgb(255, 255, 255);
+    font-weight:bold;
+} */
+
+
+
+
+/* @media (max-width: 1140px) {
+
+    .first-section {
+        padding: 40px 5%;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    #myPic {
+        width: 340px;
+        height: 340px;
+    }
+
+    #front {
+        max-width: 520px;
+    }
+
+    #p1 {
+        font-size: 2.2rem;
+    }
+
+    #p2 {
+        font-size: 1.3rem;
+    }
+
+    #container-Project {
+        grid-template-columns: repeat(2, 290px);
+        gap: 40px 60px;
+    }
+
+    #section_ProjectTitle {
+        font-size: 42px;
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    #container-ContactMe {
+        gap: 30px;
+        padding: 0 40px;
+    }
+
+    #container-Context {
+        width: 45%;
+        margin-left: 0;
+    }
+
+    #Contact-Form-Div {
+        width: 55%;
+    }
+
+    #contactForm-Panel {
+        margin: 8%;
+        margin-right: 8%;
+    }
+
+    .contactForm-inputs {
+        width: 100%;
+    }
+
+    .social {
+        width: 100%;
+        position: static;
+        margin-top: 20px;
+    }
+}  */
+
+/* @media (max-width: 1024px) {
+
+    .first-section {
+        padding: 40px 6%;
+        gap: 30px;
+    }
+
+    #myPic {
+        width: 300px;
+        height: 300px;
+    }
+
+    #p1 {
+        font-size: 2rem;
+    }
+
+    #p2 {
+        font-size: 1.3rem;
+    }
+
+    #container-Project {
+        grid-template-columns: repeat(2, 260px);
+        gap: 35px 50px;
+    }
+
+    #container-ContactMe {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #container-Context,
+    #Contact-Form-Div {
+        width: 100%;
+        margin: 0;
+    }
+
+    #contactForm-Panel {
+        margin: 40px auto;
+        width: 90%;
+    }
+
+    .social {
+        position: static;
+        width: 100%;
+        justify-content: center;
+        margin-top: 30px;
+    }
+} */
+
+@media (max-width: 360px) {
+        body{
+        width: 100%;
+        height: 100vh;
+        } 
+
+
+        #LogoHome {
+            top: 10px;
+            left: 10px;
+            /* padding: 4px 8px; */
+            padding: 4px 8px 4px 4px;
+
+            border-width: 2px;
+        }
+
+        #LogoHome img  {
+            height: 25px;
+            width: 25px;
+        }
+
+        /* ------------------------ */
+
+        .first-section {
+            flex-direction: column;
+            padding: 30px 5%;
+        }
+
+        #myPic{
+            width: 260px;
+            height: 260PX;
+            margin: 20px auto;
+        }
+        #front {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #p1 {
+            font-size: 1.6rem;
+        }  
+
+        #p2 {
+            font-size: 1.2rem;
+            position: static;
+            margin-bottom: 20px;
+        } 
+        .button-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 12px;
+        }
+        .Topbutton {
+            font-size: 17px;
+            padding: 10px 14px;
+
+        }
+        .buttonDownloadCV {
+            font-size: 17px;
+            padding: 10px 14px;
+            
+        }
+        /* ------------------------ */
+
+
+        #section_ProjectTitle {
+            font-size: 32px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        #container-Project {
+            grid-template-columns: 1fr;
+            gap: 25px;
+            padding: 0 16px;
+        }
+
+        .project-card {
+            width: 100%;
+            max-width: 230px;
+            height: auto;
+            display: block;
+        }
+        .project-card img {
+            width: 220px;
+            height: 120px;
+        }
+
+        .content-Title, #Echoes-Title {
+            font-size: 22px;
+        }
+        .card-content {
+            font-size: 14px;
+        }
+        .button-View
+        {
+            width: 100%;
+            margin-top: 15px;
+        }
+        /* ------------------------ */
+
+
+        #section_ContactTitle {
+            top: 0;
+            margin-top: 40px;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        #container-ContactMe {
+            flex-direction: column;
+            height: auto;
+            padding: 0 16px;
+        }
+
+        #container-Context {
+            width: 100%;
+            margin: 0;
+            text-align: center;
+        }
+
+        #title-ContactMe {
+            font-size: 26px;
+            margin-top: 30px;
+        }
+
+        .text-ContactMe-Container {
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        .social{
+            position: static;
+            width: 100%;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .social a {
+            scale: 1.4;
+            margin: 10px;
+        }
+
+
+        #Contact-Form-Div {
+            width: 100%;
+        }
+
+        #contactForm-Panel {
+            margin: 20px 0;
+            /* border-radius: 30px; */
+        }
+
+        .container-ContactForm {
+            height: auto;
+            padding: 20px 0;
+        }
+        .contactForm-inputs {
+            /* padding: 20px 0; */
+            width: 100%;
+        }
+        .contact-form button {
+            align-self: center;
+        }
+}
+
+/* @media (min-width: 1025px) and (max-width: 1920px) {
+
+} */
+
+/* @media (min-width: 1920px) {
+    
+} */

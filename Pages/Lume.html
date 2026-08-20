@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/project-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <style>:root { --accent: #FEA7BB; }</style>    
+
+
+    <title>Lume</title>
+</head>
+<body>
+
+    <div id="LogoHome">
+            <a href="/index.html">
+                <div id="LogoHome1">
+                    <img src="/Image/Nior Cat Logo.png" alt="Home">
+                </div>
+                <p>Home</p>
+            </a>
+    </div>
+
+    
+    <div class="whole-section">
+        <div class="content-section">
+            <span class="eyebrow">// Brackeys Game Jam</span>
+
+            <div id="title"><p>Lume</p></div>
+            <div id="title1"><p>3D Platformer</p></div>
+            <div id="title2">
+                <p>Lume is a 3D platformer where you solve puzzles, overcome obstacles, and explore a mysterious world to complete your adventure.</p>
+            </div>
+            <div class="icons">
+                <div class="icon"><p></p><i class="fa-brands fa-unity"></i><p> Unity</p></div>
+                <div class="icon"><i class="fa-solid fa-code"></i><p> C#</p></div>
+                <div class="icon"><i class="fa-solid fa-cube"></i><p>3D</p></div>
+                <!-- <div class="icon"><i class="fa-regular fa-square"></i><p>2D</p></div> -->
+            </div>
+        </div>
+
+        <div class="image-content" >
+            <img src="/Image/Lume.png" alt="Game 1 Image">
+        </div>
+    </div>
+
+        <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>My Contribution</p>
+            </div>
+            <ul class="section-content">
+                <li>Created 3D character models.</li>
+                <li>Designed and built the game environment.</li>
+                <li>Developed engaging level progression.</li>
+                <li>Created obstacle mechanics and level hazards.</li>
+                <li>Optimized 3D models for better performance.</li>
+                <li>Implemented lighting and visual effects.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>Key Features</p>
+            </div>
+            <ul class="section-content">
+                <li>Obstacle-based gameplay</li>
+                <li>Progressive level system</li>
+                <li>Offline gameplay</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>Challenges</p>
+            </div>
+            <p class="section-content-center">One of the biggest challenges was importing 3D models from Maya into Unity. Although the low poly models appeared smooth in Maya, their shading and normals looked incorrect after being imported into Unity.</p>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>Solutions</p>
+            </div>
+                <p class="section-content-center">I learned how to troubleshoot model import settings by recalculating normals, adjusting smoothing groups, and configuring the appropriate FBX export and Unity import settings. Through testing and iteration, I achieved the intended visual quality in Unity.</p>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>What I Learned</p>
+            </div>
+            <p class="section-content-center">This was my first 3D game project, and it introduced me to the complete 3D asset pipeline from modeling in Maya to importing, optimizing, and integrating assets into Unity. It helped me build a strong foundation in 3D game development and asset optimization.</p>
+        </div>
+    </div>
+
+
+
+    <div class="Screenshot-section">
+        <div id="ss-Title"><p>Gameplay Screenshots</p></div>
+        <div id="ss-Title1">Click any image to expand</div>
+
+        <div class="screenshots">
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Lume/Lume 1.png')">
+                <img src="/Image/Screenshot/Lume/Lume 1.png" alt="Screenshot 1" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Lume/Lume 2.png')">
+                <img src="/Image/Screenshot/Lume/Lume 2.png" alt="Screenshot 2" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Lume/Lume 3.png')">
+                <img src="/Image/Screenshot/Lume/Lume 3.png" alt="Screenshot 3" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Lume/Lume 4.png')">
+                <img src="/Image/Screenshot/Lume/Lume 4.png" alt="Screenshot 4" >
+            </div>
+        </div>
+    </div>
+
+    <div class="screenshot-overlay">
+        <div id="close"><i class="fa-solid fa-xmark" onclick="off()"></i></div>
+        <div>
+            <img id="overlay-img" src ="" alt="Expanded Screenshot">
+        </div>
+    </div>
+
+
+    <div class="Gameplay-section">
+        <div id="ss-Title"><p>Gameplay</p></div>
+
+        <div id="GameplayVideo">
+            <iframe id="gameplayIframe"
+                src="https://www.youtube.com/embed/6JvPuk3FvLA" 
+                title="Lume Gameplay" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+
+            <div id="noInternetFallback" class="no-internet-fallback">
+                <img src="/Image/no-internet.png" alt="No internet connection">
+            </div>
+        </div>
+        
+        <div class="project-details">
+            <div class="detail-item">
+                    <span class="label">Role</span>
+                    <span class="value">Game Programmer, Technical Environment Artist</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Tools</span>
+                    <span class="value">Unity, Maya, Photoshop</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Platform</span>
+                    <span class="value">PC</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Date Created</span>
+                    <span class="value">Feb 23, 2025</span>
+            </div>
+            <!-- <div class="detail-item">
+                    <span class="label">Status</span>
+                    <span class="value">Complete</span>
+            </div> -->
+        </div>
+    </div>
+
+    <script>
+        let wrappers = document.querySelectorAll('.screenshot-wrapper');
+        let iconWrappers = document.querySelectorAll('.icon');
+        wrappers.forEach(wrapper =>{
+            wrapper.onmousemove = function(e){
+                // let x = e.pageX - wrapper.offsetLeft;
+                // let y = e.pageY - wrapper.offsetTop;
+                let rect = wrapper.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+                
+                wrapper.style.setProperty('--x', x + 'px');
+                wrapper.style.setProperty('--y', y + 'px');
+            }
+        })
+
+        iconWrappers.forEach(wrapper =>{
+            wrapper.onmousemove = function(e){
+                let rect = wrapper.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+                
+                wrapper.style.setProperty('--x', x + 'px');
+                wrapper.style.setProperty('--y', y + 'px');
+            }
+        })
+
+        function on(clickedImg) {
+            document.querySelector('.screenshot-overlay').style.display = "block";
+            document.getElementById("overlay-img").src = clickedImg;
+        }
+
+        function off() {
+            document.querySelector('.screenshot-overlay').style.display ="none"
+        }
+
+        const gameplayIframe = document.getElementById('gameplayIframe');
+        const noInternetFallback = document.getElementById('noInternetFallback');
+
+        function showFallback(show) {
+            gameplayIframe.style.display = show ? 'none' : 'block';
+            noInternetFallback.style.display = show ? 'flex' : 'none';
+        }
+
+        // Quick real-world connectivity check (navigator.onLine alone isn't reliable —
+        // it only checks the network adapter, not actual internet access)
+        function checkRealConnection() {
+            if (!navigator.onLine) {
+                showFallback(true);
+                return;
+            }
+            // Try to fetch a tiny resource with a short timeout
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 3000);
+
+            fetch('https://www.youtube.com/favicon.ico', { mode: 'no-cors', signal: controller.signal })
+                .then(() => {
+                    clearTimeout(timeout);
+                    showFallback(false);
+                })
+                .catch(() => {
+                    clearTimeout(timeout);
+                    showFallback(true);
+                });
+        }
+
+        window.addEventListener('online', checkRealConnection);
+        window.addEventListener('offline', () => showFallback(true));
+
+        checkRealConnection();
+    </script>
+
+</body>
+</html>

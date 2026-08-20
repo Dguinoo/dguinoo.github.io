@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/project-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <style>:root { --accent: #5AD4EF; }</style>    
+
+
+    <title>Allen & Denz Quest</title>
+</head>
+<body>
+
+    <div id="LogoHome">
+            <a href="/index.html">
+                <div id="LogoHome1">
+                    <img src="/Image/Nior Cat Logo.png" alt="Home">
+                </div>
+                <p>Home</p>
+            </a>
+    </div>
+
+    
+    <div class="whole-section">
+        <div class="content-section">
+            <span class="eyebrow">// Final Project</span>
+            <div id="title">
+                <p>Allen & Denz Quest</p>
+            </div>
+            <div id="title1">
+                <p>2D Side-Scrolling Platformer</p>
+            </div>
+            <div id="title2">
+                <p>Allen and Denz Quest is a 2D puzzle platformer game with a full of traps. Work together with your partner to overcome challenges and complete the adventure.</p>
+            </div>
+            <div class="icons">
+                <div class="icon"><p></p><i class="fa-brands fa-unity"></i><p> Unity</p></div>
+                <div class="icon"><i class="fa-solid fa-code"></i><p> C#</p></div>
+                <!-- <div class="icon"><i class="fa-solid fa-cube"></i><p>3D</p></div> -->
+                <div class="icon"><i class="fa-regular fa-square"></i><p>2D</p></div>
+            </div>
+        </div>
+
+        <div class="image-content" >
+            <img src="/Image/Allen & Denz Quest.png" alt="Game 1 Image">
+        </div>
+    </div>
+
+        <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>My Contribution</p>
+            </div>
+            <ul class="section-content">
+                <li>Designed cooperative puzzle levels requiring teamwork and coordination.</li>
+                <li>Balanced gameplay for a two-player cooperative experience.</li>
+                <li>Built and programmed traps and interactive level mechanics.</li>
+                <li>Created obstacles and environmental gameplay challenges.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>Key Features</p>
+            </div>
+            <ul class="section-content">
+                <li>Two-player cooperative gameplay</li>
+                <li>Puzzle and obstacle-based levels</li>
+                <li>Progressive level system</li>
+                <li>Offline multiplayer</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>Challenges</p>
+            </div>
+            <p class="section-content-center">One of the biggest challenges was designing puzzle levels that were both engaging and efficient to create. Each level needed to encourage cooperation between two players while maintaining a balanced difficulty and a smooth progression. </p>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>Solutions</p>
+            </div>
+                <p class="section-content-center">I used Unity's Tilemap system to speed up level creation and make iteration easier. By rapidly prototyping layouts and testing them with my teammate, I refined puzzles, obstacle placement, and trap mechanics to create a more enjoyable cooperative experience.</p>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>What I Learned</p>
+            </div>
+            <p class="section-content-center">This project strengthened my understanding of cooperative game design and level design principles. I learned how to create puzzles that require teamwork, use Unity's Tilemap system to develop levels more efficiently, and improve gameplay through continuous playtesting and iteration.</p>
+        </div>
+    </div>
+
+
+    <div class="Screenshot-section">
+        <div id="ss-Title"><p>Gameplay Screenshots</p></div> 
+        <div id="ss-Title1">Click any image to expand</div>
+
+
+        <div class="screenshots">
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Allen & Denz Quest/Allen & Denz Quest 1.png')">
+                <img src="/Image/Screenshot/Allen & Denz Quest/Allen & Denz Quest 1.png" alt="Screenshot 1" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Allen & Denz Quest/Allen & Denz Quest 2.png')">
+                <img src="/Image/Screenshot/Allen & Denz Quest/Allen & Denz Quest 2.png" alt="Screenshot 2" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Allen & Denz Quest/Allen & Denz Quest 3.png')">
+                <img src="/Image/Screenshot/Allen & Denz Quest/Allen & Denz Quest 3.png" alt="Screenshot 3" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Allen & Denz Quest/Allen & Denz Quest 4.png')">
+                <img src="/Image/Screenshot/Allen & Denz Quest/Allen & Denz Quest 4.png" alt="Screenshot 4" >
+            </div>
+        </div>
+    </div>
+
+    <div class="screenshot-overlay">
+        <div id="close"><i class="fa-solid fa-xmark" onclick="off()"></i></div>
+        <div>
+            <img id="overlay-img" src ="" alt="Expanded Screenshot">
+        </div>
+    </div>
+
+
+    <div class="Gameplay-section">
+        <div id="ss-Title"><p>Gameplay</p></div>
+
+        <div id="GameplayVideo">
+            <iframe id="gameplayIframe"
+                src="https://www.youtube.com/embed/zV5t_3C2EEM" 
+                title="Allen & Denz Quest Gameplay" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+
+            <div id="noInternetFallback" class="no-internet-fallback">
+                <img src="/Image/no-internet.png" alt="No internet connection">
+            </div>
+        </div>
+        
+
+        <div class="project-details">
+            <div class="detail-item">
+                    <span class="label">Role</span>
+                    <span class="value">Game Programmer, Technical Environment Artist</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Tools</span>
+                    <span class="value">Unity, Maya</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Platform</span>
+                    <span class="value">PC</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Date Created</span>
+                    <span class="value">Nov 30, 2023</span>
+            </div>
+            <!-- <div class="detail-item">
+                    <span class="label">Status</span>
+                    <span class="value">Complete</span>
+            </div> -->
+        </div>
+    </div>
+
+    <script>
+        let wrappers = document.querySelectorAll('.screenshot-wrapper');
+        let iconWrappers = document.querySelectorAll('.icon');
+        wrappers.forEach(wrapper =>{
+            wrapper.onmousemove = function(e){
+                // let x = e.pageX - wrapper.offsetLeft;
+                // let y = e.pageY - wrapper.offsetTop;
+                let rect = wrapper.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+                
+                wrapper.style.setProperty('--x', x + 'px');
+                wrapper.style.setProperty('--y', y + 'px');
+            }
+        })
+
+        iconWrappers.forEach(wrapper =>{
+            wrapper.onmousemove = function(e){
+                let rect = wrapper.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+                
+                wrapper.style.setProperty('--x', x + 'px');
+                wrapper.style.setProperty('--y', y + 'px');
+            }
+        })
+
+        function on(clickedImg) {
+            document.querySelector('.screenshot-overlay').style.display = "block";
+            document.getElementById("overlay-img").src = clickedImg;
+        }
+
+        function off() {
+            document.querySelector('.screenshot-overlay').style.display ="none"
+        }
+
+        const gameplayIframe = document.getElementById('gameplayIframe');
+        const noInternetFallback = document.getElementById('noInternetFallback');
+
+        function showFallback(show) {
+            gameplayIframe.style.display = show ? 'none' : 'block';
+            noInternetFallback.style.display = show ? 'flex' : 'none';
+        }
+
+        // Quick real-world connectivity check (navigator.onLine alone isn't reliable —
+        // it only checks the network adapter, not actual internet access)
+        function checkRealConnection() {
+            if (!navigator.onLine) {
+                showFallback(true);
+                return;
+            }
+            // Try to fetch a tiny resource with a short timeout
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 3000);
+
+            fetch('https://www.youtube.com/favicon.ico', { mode: 'no-cors', signal: controller.signal })
+                .then(() => {
+                    clearTimeout(timeout);
+                    showFallback(false);
+                })
+                .catch(() => {
+                    clearTimeout(timeout);
+                    showFallback(true);
+                });
+        }
+
+        window.addEventListener('online', checkRealConnection);
+        window.addEventListener('offline', () => showFallback(true));
+
+        checkRealConnection();
+    </script>
+
+</body>
+</html>

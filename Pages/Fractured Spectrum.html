@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/project-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <!-- <style>:root { --accent-gradient: linear-gradient(90deg, #ffffff, #2196f3, #e63946, #ffeb3b); }</style> -->
+    <style>:root { --accent: red; }</style>    
+
+    
+
+
+    <title>Fractured Spectrum</title>
+</head>
+<body>
+
+    <div id="LogoHome">
+            <a href="/index.html">
+                <div id="LogoHome1">
+                    <img src="/Image/Nior Cat Logo.png" alt="Home">
+                </div>
+                <p>Home</p>
+            </a>
+    </div>
+
+    
+    <div class="whole-section">
+        <div class="content-section">                        
+        <span class="eyebrow">// Final Project</span>
+
+
+            <div id="title"><p>Fractured Spectrum</p></div>
+            <div id="title1"><p>3D Top-down Survival Shooter</p></div>
+            <div id="title2">
+                <p>As a lone glowing icosahedron in a geometric void, you face endless waves of color-coded enemies—fragments of a broken spectrum. Survive, or be shattered.</p>
+            </div>
+            <div class="icons">
+                <div class="icon"><p></p><i class="fa-brands fa-unity"></i><p> Unity</p></div>
+                <div class="icon"><i class="fa-solid fa-code"></i><p> C#</p></div>
+                <div class="icon"><i class="fa-solid fa-cube"></i><p>3D</p></div>
+                <!-- <div class="icon"><i class="fa-regular fa-square"></i><p>2D</p></div> -->
+            </div>
+        </div>
+
+        <div class="image-content" >
+            <img src="/Image/Fractured Spectrum.png" alt="Game 1 Image">
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>My Contribution</p>
+            </div>
+            <ul class="section-content">
+                <li>Programmed player movement, jumping, and combat mechanics.</li>
+                <li>Implemented enemy AI with player detection, tracking, and unique behaviors using finite state machines.</li>
+                <li>Created unique behaviors for each enemy type.</li>
+                <li>Developed the wave-based gameplay system with timed enemy spawning.</li>
+                <li>Built the game's progression system, including level flow, enemy waves, and scene transitions.</li>
+                <li>Balanced enemy encounters to create a progressive gameplay experience.</li>
+                <li>Implemented object pooling for bullets to improve performance.</li>
+                <li>Created particle effects for explosions and combat feedback.</li>
+                <li>Developed URP lighting and emissive visual effects.</li>
+                <li>Defined the game's visual direction to maintain a consistent art style.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>Key Features</p>
+            </div>
+            <ul class="section-content">
+                <li>Wave-based survival system</li>
+                <li>Progressive gameplay and level progression</li>
+                <li>Multiple enemy types with unique AI behaviors/li>
+                <li>Offline gameplay</li>
+                <li>Optimized performance using object pooling</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>Challenges</p>
+            </div>
+            <p class="section-content-center">The biggest challenge was transitioning my game development knowledge from 2D to 3D. I had to adapt familiar gameplay mechanics, enemy AI, and level design concepts to a three-dimensional environment while learning new workflows.</p>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>Solutions</p>
+            </div>
+                <p class="section-content-center">I applied the programming principles and gameplay systems I had learned from 2D development, then adapted them to 3D by experimenting, prototyping, and iterating. Through continuous testing and problem-solving, I successfully implemented the mechanics in a 3D environment.</p>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <div class="info-card-header">
+                <p>What I Learned</p>
+            </div>
+            <p class="section-content-center">This was my first solo 3D game inspired by the gameplay of Vampire Survivors. The project strengthened my understanding of 3D game development, reinforced that many core programming concepts apply across both 2D and 3D games, and improved my confidence in building complete games independently.</p>
+        </div>
+    </div>
+
+
+
+    <div class="Screenshot-section">
+        <div id="ss-Title"><p>Gameplay Screenshots</p></div>
+        <div id="ss-Title1">Click any image to expand</div>
+
+
+        <div class="screenshots">
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Fractured Spectrum/Fractured Spectrum 1.png')">
+                <img src="/Image/Screenshot/Fractured Spectrum/Fractured Spectrum 1.png" alt="Screenshot 1" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Fractured Spectrum/Fractured Spectrum 2.png')">
+                <img src="/Image/Screenshot/Fractured Spectrum/Fractured Spectrum 2.png" alt="Screenshot 2" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Fractured Spectrum/Fractured Spectrum 3.png')">
+                <img src="/Image/Screenshot/Fractured Spectrum/Fractured Spectrum 3.png" alt="Screenshot 3" >
+            </div>
+            <div class="screenshot-wrapper" onclick="on('/Image/Screenshot/Fractured Spectrum/Fractured Spectrum 4.png')">
+                <img src="/Image/Screenshot/Fractured Spectrum/Fractured Spectrum 4.png" alt="Screenshot 4" >
+            </div>
+        </div>
+    </div>
+
+    <div class="screenshot-overlay">
+        <div id="close"><i class="fa-solid fa-xmark" onclick="off()"></i></div>
+        <div>
+            <img id="overlay-img" src ="" alt="Expanded Screenshot">
+        </div>
+    </div>
+
+
+    <div class="Gameplay-section">
+        <div id="ss-Title"><p>Gameplay</p></div>
+
+        <div id="GameplayVideo">
+            <iframe id="gameplayIframe"
+                src="https://www.youtube.com/embed/TrIJrYnLRp8" 
+                title="Fractured Spectrum Gameplay" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+
+            <div id="noInternetFallback" class="no-internet-fallback">
+                <img src="/Image/no-internet.png" alt="No internet connection">
+            </div>
+        </div>
+        
+
+        <div class="project-details">
+            <div class="detail-item">
+                    <span class="label">Role</span>
+                    <span class="value">Solo Developer</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Tools</span>
+                    <span class="value">Unity, Maya, Photoshop</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Platform</span>
+                    <span class="value">PC</span>
+            </div>
+            <div class="detail-item">
+                    <span class="label">Date Created</span>
+                    <span class="value">June 8, 2025</span>
+            </div>
+            <!-- <div class="detail-item">
+                    <span class="label">Status</span>
+                    <span class="value">Complete</span>
+            </div> -->
+        </div>
+    </div>
+
+    <script>
+        let wrappers = document.querySelectorAll('.screenshot-wrapper');
+        let iconWrappers = document.querySelectorAll('.icon');
+        wrappers.forEach(wrapper =>{
+            wrapper.onmousemove = function(e){
+                // let x = e.pageX - wrapper.offsetLeft;
+                // let y = e.pageY - wrapper.offsetTop;
+                let rect = wrapper.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+                
+                wrapper.style.setProperty('--x', x + 'px');
+                wrapper.style.setProperty('--y', y + 'px');
+            }
+        })
+
+        iconWrappers.forEach(wrapper =>{
+            wrapper.onmousemove = function(e){
+                let rect = wrapper.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+                
+                wrapper.style.setProperty('--x', x + 'px');
+                wrapper.style.setProperty('--y', y + 'px');
+            }
+        })
+
+        function on(clickedImg) {
+            document.querySelector('.screenshot-overlay').style.display = "block";
+            document.getElementById("overlay-img").src = clickedImg;
+        }
+
+        function off() {
+            document.querySelector('.screenshot-overlay').style.display ="none"
+        }
+
+        const gameplayIframe = document.getElementById('gameplayIframe');
+        const noInternetFallback = document.getElementById('noInternetFallback');
+
+        function showFallback(show) {
+            gameplayIframe.style.display = show ? 'none' : 'block';
+            noInternetFallback.style.display = show ? 'flex' : 'none';
+        }
+
+        // Quick real-world connectivity check (navigator.onLine alone isn't reliable —
+        // it only checks the network adapter, not actual internet access)
+        function checkRealConnection() {
+            if (!navigator.onLine) {
+                showFallback(true);
+                return;
+            }
+            // Try to fetch a tiny resource with a short timeout
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 3000);
+
+            fetch('https://www.youtube.com/favicon.ico', { mode: 'no-cors', signal: controller.signal })
+                .then(() => {
+                    clearTimeout(timeout);
+                    showFallback(false);
+                })
+                .catch(() => {
+                    clearTimeout(timeout);
+                    showFallback(true);
+                });
+        }
+
+        window.addEventListener('online', checkRealConnection);
+        window.addEventListener('offline', () => showFallback(true));
+
+        checkRealConnection();
+    </script>
+
+</body>
+</html>
